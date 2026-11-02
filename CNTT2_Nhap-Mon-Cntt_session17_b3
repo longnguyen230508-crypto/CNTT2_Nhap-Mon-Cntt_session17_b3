@@ -1,0 +1,10 @@
+Phần 1: Báo cáo phân tích (I/O) Box Model
+1: Sơ đồ 4 lớp thực tế của phần tử đang bị lỗi bao gồm Content, Padding, Border và Margin (xếp từ trong ra ngoài).
+CONTENT (Kích thước thực: Text / Video)
+PADDING (Khoảng đệm bên trong: quá lớn/quá nhỏ)
+BORDER (Đường viền: bọc quanh khung nội dung)
+MARGIN (Khoảng cách lề ngoài giữa 2 khung: 0px hoặc bị âm)
+2: Hiện tượng chồng lấn xảy ra chủ yếu do vị trí phần tử bị cố định hoặc thiết lập kích thước chưa đồng bộ, khiến các lớp khoảng cách đè lên nhau.
+Phần 2: Thiết kế giải pháp sửa lỗi giao diện
+1: Thiết lập lại thuộc tính position: relative kết hợp với box-sizing: border-box để trình duyệt tự động tính toán chính xác kích thước bao gồm cả viền và đệm.
+2: Bổ sung các thông số khoảng cách an toàn như margin-bottom hoặc margin-top cho từng khung nội dung để tách biệt hoàn toàn mà không làm vỡ bố cục tổng thể.
